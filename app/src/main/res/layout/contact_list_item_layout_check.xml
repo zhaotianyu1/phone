@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:glow_type="list_item"
+    app:need_shimmer = "true"
+    app:need_border="true"
+    app:need_glow_anim="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="#14FFFFFF"
+    app:border_stroke_width="1pt"
+    app:fill_content_focused_color="@color/white"
+    android:focusable="true"
+    android:descendantFocusability="blocksDescendants"
+    card_view:cardCornerRadius="4dp">
+
+
+    <LinearLayout
+        android:id="@+id/copy_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageButton
+            android:id="@+id/peo_photo_contact"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12px"
+            android:layout_marginBottom="12px"
+            android:background="@drawable/male01"
+            android:paddingRight="72px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/con_list"
+                android:layout_width="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="84px"
+                android:paddingLeft="18px"
+                android:paddingTop="12px"
+                android:paddingBottom="12px"
+                android:text=""
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="38px"/>
+            <TextView
+                android:id="@+id/phone_copy"
+                android:layout_width="190dp"
+                android:layout_height="84px"
+                android:paddingRight="22px"
+                android:paddingTop="12px"
+                android:paddingBottom="12px"
+                android:layout_marginRight="40dp"
+                android:text=""
+                android:singleLine="true"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textSize="38px"
+                android:layout_alignParentRight="true"/>
+        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/column_select_man"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="right"-->
+<!--            >-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/right_arrow"-->
+<!--                android:layout_marginTop="40px"-->
+<!--                android:layout_marginLeft="45px"-->
+<!--                android:layout_marginRight="20px"/>-->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+
+
+</com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>

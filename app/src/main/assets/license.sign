@@ -1,0 +1,32 @@
+[Licensee]
+Activation=yes
+AppID=com.example.tclphone
+Offline=yes
+
+[Module]
+
+[AudioCodec]
+PCMU=yes
+PCMA=yes
+GSM=yes
+G722=yes
+G729=yes
+iLBC=yes
+AMR=yes
+AMR-WB=yes
+iSAC=yes
+opus=yes
+
+[VideoCodec]
+H263=yes
+H264=yes
+H264-SVC=yes
+VP8=yes
+
+[Devices]
+
+
+Juphoon Co. Ltd. Sign Data
+Ks6ÖŒ¾º‰ú!¶}ð“˜Ä-¨ÕgÅ@ð$“0ØrmZöÊbwø¿ÞhL`oÖû‚PmýøD7¿è%´WhiyO:¯>™ª¥çJ Þw……u¸]8[™•!óÊ;O7{{uÚšsÁï—r†ºfÑ|úšËUî)£Ý6#èy€ç6y…Jç¸Ã.NÀ‰N‡8É©UÊ¼XOì8²ë)žF½úJø`}ÉxÒšÍgJ‚¥yÉþwÊÔ
+`ÍºÏÉ€oæ"º!
+Ø™ =tÀóBï€ŽF]w:þ¾¤I''QÂ3ÝÌƒª¨þÞa!†JVHBÜÑÑ?^„”ÿÀÿ

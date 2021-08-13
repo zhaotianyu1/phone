@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="phone" />
+    <version value="9" />
+
+    <list>
+        <mapping class="com.example.tclphone.db.Contacts" />
+        <mapping class="com.example.tclphone.db.Records" />
+        <mapping class="com.example.tclphone.db.LocalNumber"/>
+        <mapping class="com.example.tclphone.db.Message"/>
+        <mapping class="com.example.tclphone.db.Person"/>
+        <mapping class="com.example.tclphone.db.Phone"/>
+        <mapping class="com.example.tclphone.db.SIM"/>
+    </list>
+
+</litepal>

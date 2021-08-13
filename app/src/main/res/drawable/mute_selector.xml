@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_call_slient_focus" android:state_pressed="true" android:state_focused="false"/>
+    <item android:drawable="@drawable/ic_call_slient_nor"/>
+</selector >

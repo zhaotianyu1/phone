@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.tclphone"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        
+        versionName "2.4.9"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                abiFilters 'armeabi-v7a'
+            }
+            ndk {
+                abiFilters 'armeabi-v7a'
+            }
+        }
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean","LOG_DEBUG","true"
+            signingConfig  signingConfigs.debug
+        }
+        debug{
+            debuggable true
+            minifyEnabled false
+            buildConfigField "boolean","LOG_DEBUG","true"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig  signingConfigs.debug
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('libs/platformSign.keystore')
+            storePassword '19941116'
+            keyAlias = 'platformsign'
+            keyPassword '19941116'
+        }
+    }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //这里修改apk文件名
+                outputFileName = "TclPhone.apk"
+            }
+    }
+    packagingOptions {
+        exclude 'META-INF/MANIFEST.MF'
+        pickFirst 'lib/armeabi-v7a/libmtcvoip.so'
+        pickFirst 'lib/armeabi-v7a/libzmf.so'
+        pickFirst 'lib/armeabi-v7a/libtrild.so'
+        pickFirst 'lib/armeabi-v7a/libsitatv.so'
+        pickFirst 'lib/armeabi-v7a/libmtccommon.so'
+        pickFirst 'lib/armeabi-v7a/libdmsdpcamerahandler.so'
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+        }
+    }
+
+    sourceSets {
+        main {
+            // let gradle pack the shared library into apk
+            jniLibs.srcDirs = ['/src/main/cpp/jniLibs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    ndkVersion "21.1.6352462"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation files('libs\\pinyin4j-2.5.0.jar')
+
+    //implementation 'org.litepal:LitePal:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+//    implementation 'org.litepal.guolindev:core:3.2.1'
+
+//    implementation 'org.litepal.android:core:1.6.1'
+
+    implementation files('libs\\com.tcl.areaconfiger.jar')
+
+    implementation files('libs/tvmanager.jar')
+
+    implementation files('libs/rcscall.aar')
+    implementation files('libs/rcslogin.aar')
+    implementation files('libs/voiplibs.aar')
+
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.tcl.ff.component:animer:0.6.1'
+
+    implementation 'com.tcl.uicompat:uicompat:3.2.2'
+
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.tcl.walleveHelper:walleveSdk:3.00.37"
+
+}

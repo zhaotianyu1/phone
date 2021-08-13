@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="533.3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="96dp"
+    android:gravity="center_vertical"
+    android:background="#14FFFFFF"
+    android:focusable="true"
+    app:glow_type="list_item"
+    app:need_shimmer = "true"
+    app:need_border="false"
+    app:need_glow_anim="true"
+    android:clipToPadding="false"
+
+    app:fill_content_focused_color="@color/white"
+    android:fitsSystemWindows="true"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/record_mode"
+            android:layout_width="37.3dp"
+            android:layout_height="37.3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/dialout"
+            android:layout_toLeftOf="@+id/record_date"
+            android:paddingRight="5.3dp"
+            />
+
+    </LinearLayout>
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/record_photo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/user1"-->
+<!--        android:layout_marginLeft="26.7dp"/>-->
+
+    <LinearLayout
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11.3dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/record_name"
+                android:layout_width="266dp"
+                android:layout_height="37.3dp"
+                android:text="测试姓名"
+                android:textColor="#99FFFFFF"
+                android:textSize="24sp"
+                android:singleLine="true"
+                android:gravity="left"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/record_operator"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10.7dp"-->
+<!--                android:text="中国电信"-->
+<!--                android:textColor="#B3FFFFFF"-->
+<!--                android:textSize="13.3sp"-->
+<!--                />-->
+
+
+        <TextView
+            android:id="@+id/record_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="26.7dp"
+            android:text="57分钟"
+            android:textColor="#4DFFFFFF"
+            android:textSize="18.7sp"
+            />
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/record_date"
+            android:layout_width="100dp"
+            android:layout_height="37.4dp"
+            android:text="5天前"
+            android:layout_marginRight="25dp"
+            android:textColor="#4DFFFFFF"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="21.3sp"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+        />
+
+        <TextView
+            android:id="@+id/absolute_data"
+            android:layout_width="200dp"
+            android:layout_height="37.4dp"
+            android:text="5天前"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="11dp"
+            android:textColor="#4DFFFFFF"
+            android:textSize="21.3sp"
+            android:layout_gravity="center_vertical"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            />
+
+<!--        <View-->
+<!--            android:background="@drawable/element_divider_list_use"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/element_divider_height" />-->
+
+    </LinearLayout>
+
+
+
+
+
+</com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>

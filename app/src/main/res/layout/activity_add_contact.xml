@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".phonebook.AddContactActivity"
+    android:background="@drawable/launcher_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        tools:ignore="MissingConstraints">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="885.3dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="53.5dp"
+                android:gravity="bottom"
+                android:layout_marginLeft="77.3dp"
+                android:text="添加联系人"
+                android:textColor="#B3FFFFFF"
+                android:textSize="37.3sp" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+
+            <TextView
+                android:id="@+id/textNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="手机号"
+                android:layout_marginTop="20dp"
+                android:textColor="#99FFFFFF"
+                android:textSize="38px" />
+
+            <com.tcl.uicompat.TCLEditText
+                style="@style/NormalEditText"
+                android:id="@+id/textNum2"
+                android:layout_width="759px"
+                android:layout_height="80dp"
+                android:layout_marginLeft="86px"
+                android:digits="1234567890"
+                android:maxLength="20"
+                android:layout_marginTop="20dp"
+                android:enabled="true"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="昵称"
+                android:textColor="#99FFFFFF"
+                android:textSize="38px" />
+
+            <com.tcl.uicompat.TCLEditText
+                style="@style/NormalEditText"
+                android:id="@+id/textName2"
+                android:layout_width="759px"
+                android:layout_height="80dp"
+                android:layout_marginLeft="126px"
+                android:layout_marginTop="30dp"
+                android:enabled="true"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:clipChildren="false"-->
+<!--            android:clipToPadding="false"-->
+<!--            android:orientation="horizontal"-->
+<!--            tools:ignore="MissingConstraints">-->
+<!--            <TextView-->
+<!--                android:id="@+id/ima"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="443px"-->
+<!--                android:layout_marginTop="50px"-->
+<!--                android:gravity="center"-->
+<!--                android:text="头像"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="38px" />-->
+
+<!--                <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="110px"-->
+<!--                    android:layout_marginTop="50px"-->
+<!--                    android:focusable="true"-->
+<!--                    app:need_shimmer = "true"-->
+<!--                    app:need_border="true"-->
+<!--                    android:onClick="add_imaMales"-->
+<!--                    app:need_glow_anim="true"-->
+<!--                    app:border_stroke_width="1pt"-->
+<!--                    >-->
+<!--                <RadioButton-->
+<!--                    android:id="@+id/imaMale"-->
+<!--                    android:layout_width="342px"-->
+<!--                    android:layout_height="245px"-->
+<!--                    android:background="@drawable/add_male_selector"-->
+<!--                    android:enabled="true"-->
+<!--                    android:duplicateParentState="true"-->
+<!--                    android:button="@null"  />-->
+<!--                </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>-->
+
+<!--                <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="110px"-->
+<!--                    android:layout_marginTop="50px"-->
+<!--                    android:focusable="true"-->
+<!--                    app:need_shimmer = "true"-->
+<!--                    app:need_border="true"-->
+<!--                    android:onClick="add_imaFemales"-->
+<!--                    app:need_glow_anim="true"-->
+<!--                    app:border_stroke_width="1pt">-->
+<!--                <RadioButton-->
+<!--                    android:id="@+id/imaFemale"-->
+<!--                    android:layout_width="342px"-->
+<!--                    android:layout_height="245px"-->
+<!--                    android:background="@drawable/add_female_selector"-->
+<!--                    android:enabled="true"-->
+<!--                    android:duplicateParentState="true"-->
+<!--                    android:button="@null"  />-->
+<!--            </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>-->
+
+
+
+<!--        </LinearLayout>-->
+
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/storages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="40dp"
+                android:text="储存方式"
+                android:textColor="#99FFFFFF"
+                android:textSize="38px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:onClick="sims"
+                    app:border_circle_radius="100dp"
+                    app:glow_type="icon"
+                    app:need_border="true"
+                    app:need_glow_anim="true"
+                    app:need_shimmer="true"
+                    app:scale_anim_end_value="1.0"
+                    app:scale_anim_start_value="1.0"
+
+                    >
+
+                    <com.tcl.uicompat.TCLCheckBox
+                        android:id="@+id/SIM"
+                        style="@style/ElementCheckBoxStyle"
+                        android:layout_width="105.3dp"
+                        android:layout_height="105.3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_local"
+                        android:button="@null"
+                        android:duplicateParentState="true"
+                        android:enabled="true"
+                        app:need_border="true" />
+
+                    <ImageView
+                        android:id="@+id/sim_check"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="75dp"
+                        android:layout_marginTop="75dp"
+                        android:background="@drawable/ic_status_success"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:visibility="invisible" />
+                </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="SIM卡"
+                    android:textColor="#4DFFFFFF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:orientation="vertical"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:onClick="locals"
+                    app:glow_type="icon"
+                    app:need_border="true"
+                    app:need_glow_anim="true"
+                    app:need_shimmer="true"
+                    app:scale_anim_end_value="1.0"
+                    app:scale_anim_start_value="1.0">
+
+                    <com.tcl.uicompat.TCLCheckBox
+                        android:id="@+id/phone"
+                        android:layout_width="105.3dp"
+                        android:layout_height="105.3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_sim_card"
+                        android:button="@null"
+                        android:duplicateParentState="true"
+                        android:enabled="true"
+                        app:need_border="true" />
+
+                    <ImageView
+                        android:id="@+id/local_check"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="75dp"
+                        android:layout_marginTop="75dp"
+                        android:background="@drawable/ic_status_success"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:visibility="invisible" />
+                </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本 地"
+                    android:layout_marginTop="10dp"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:textColor="#4DFFFFFF" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            tools:ignore="MissingConstraints">
+
+            <com.tcl.uicompat.TCLButton
+                style="@style/Button_SuperLarge"
+                android:id="@+id/buttadd2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30px"
+                android:enabled="true"
+                android:onClick="onAdd"
+                android:text="完成"/>
+
+<!--            <com.tcl.uicompat.TCLButton-->
+<!--                android:id="@+id/buttadd3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="198px"-->
+<!--                android:layout_marginTop="20px"-->
+<!--                android:enabled="true"-->
+<!--                android:onClick="onreturn"-->
+<!--                android:text="返回"/>-->
+            <!--        <FrameLayout-->
+            <!--            android:id="@+id/contacts_frame"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="0dp"-->
+            <!--            android:layout_weight="1"-->
+            <!--            tools:ignore="MissingConstraints">-->
+            <!--        </FrameLayout>-->
+        </LinearLayout>
+        <!--        <FrameLayout-->
+        <!--            android:id="@+id/contacts_frame"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:layout_weight="1"-->
+        <!--            tools:ignore="MissingConstraints">-->
+        <!--        </FrameLayout>-->
+
+    </LinearLayout>
+
+</RelativeLayout>

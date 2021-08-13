@@ -1,0 +1,21 @@
+{
+  "record":[
+    {"id":0,"name":"彤彤","phoneNumber":18682493121,"timeStart":"5分钟前","duration":"1分钟",
+      "mode":0,"status":0,"photo":0},
+
+    {"id":1,"name":"13688845561","phoneNumber":13688845561,"timeStart":"1小时前","duration":"10分钟",
+      "mode":1,"status":1,"photo":1},
+
+    {"id":2,"name":"段刚","phoneNumber":13149921166,"timeStart":"昨天","duration":"1分钟",
+      "mode":2,"status":0,"photo":2},
+
+    {"id":3,"name":"金明","phoneNumber":15616220567,"timeStart":"8/24","duration":"1分钟",
+      "mode":3,"status":1,"photo":3},
+
+    {"id":4,"name":"小孜孜","phoneNumber":13530975667,"timeStart":"2019/10/19","duration":"1分钟",
+      "mode":0,"status":0,"photo":1},
+
+    {"id":5,"name":"姐姐","phoneNumber":18795886766,"timeStart":"2018/11/17","duration":"1分钟",
+      "mode":1,"status":1,"photo":1}
+  ]
+}

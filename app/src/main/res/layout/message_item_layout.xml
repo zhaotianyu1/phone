@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="144px"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:background="@drawable/selector_contact_item_background"
+    android:focusable="true"
+    app:glow_type="list_item"
+    app:need_shimmer = "true"
+    app:need_border="true"
+    app:need_glow_anim="true"
+    app:border_stroke_width="1pt"
+    app:fill_content_focused_color="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    card_view:cardCornerRadius="4dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical">
+<!--        <CheckBox-->
+<!--            android:id="@+id/message_checkbox"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:checked="true"-->
+<!--            />-->
+        <ImageButton
+            android:id="@+id/message_photo"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="12px"
+            android:layout_marginBottom="12px"
+            android:background="@drawable/male01"
+            android:paddingRight="72px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:text="杨佳楠"
+                android:textSize="40px"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/message_content"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginTop="12px"
+                android:singleLine="true"
+                android:text="1分钟"
+                android:textColor="@color/white"
+                android:textSize="28px" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message_time"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="10px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:text="5分钟前"
+                android:singleLine="true"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>

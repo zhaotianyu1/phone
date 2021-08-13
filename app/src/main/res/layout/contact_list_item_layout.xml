@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="533.3dp"
+    android:layout_height="86dp"
+    android:id="@+id/contacts_lists"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:fitsSystemWindows="true"
+    app:ElementRightIcon="?attr/element_tcl_icon_arrow_right"
+    app:glow_type="list_item"
+    app:need_shimmer = "true"
+    app:need_border="false"
+    app:need_glow_anim="true"
+    android:background="#0FF0F0F2"
+    app:fill_content_focused_color="@color/white"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    card_view:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:id="@+id/contacts_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/ids"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="27.3dp"-->
+        <!--            android:layout_marginLeft="25.7dp"-->
+        <!--            android:layout_marginTop="32.3dp"-->
+        <!--            android:text=""-->
+        <!--            android:textColor="#B3FFFFFF"-->
+        <!--            android:textSize="24sp" />-->
+
+        <ImageView
+            android:id="@+id/peo_photo_contact"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/list_avatar_nor" />
+
+        <TextView
+            android:id="@+id/con_list"
+            android:layout_width="296dp"
+            android:layout_height="45.3dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30.7dp"
+            android:singleLine="true"
+            android:text="本机号码"
+            android:textColor="#99FFFFFF"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/column_select_man"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/right_log"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/right_sign" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:id="@+id/record_mode"-->
+<!--        android:layout_width="555dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="104dp"-->
+<!--        android:layout_marginLeft="25dp"-->
+<!--        android:layout_marginRight="25dp"-->
+<!--        android:background="@drawable/divide"-->
+<!--        />-->
+
+</com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>

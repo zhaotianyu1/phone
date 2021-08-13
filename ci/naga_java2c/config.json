@@ -1,0 +1,4 @@
+{
+	"info": "com.tcl.versionUpdateApp,com.example.tclphone.*,com.tcl.*,com.juphoon.*",
+	"so_list": ["lib/armeabi-v7a/libmtcvoip.so","lib/armeabi-v7a/libzmf.so","lib/armeabi-v7a/libtrild.so","lib/armeabi-v7a/libsitatv.so","lib/armeabi-v7a/libmtccommon.so","lib/armeabi-v7a/libdmsdpcamerahandler.so"]
+}

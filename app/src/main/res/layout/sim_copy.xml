@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/launcher_bg">
+
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="885.3dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="53.5dp"
+                android:gravity="bottom"
+                android:layout_marginLeft="77dp"
+                android:text="复制联系人"
+                android:textColor="#B3FFFFFF"
+                android:textSize="37.3sp" />
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:id="@+id/tags"
+            >
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center">
+
+                <com.tcl.uicompat.TCLNavigationItem
+                    android:id="@+id/sim_list"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center">
+
+                <com.tcl.uicompat.TCLNavigationItem
+                    android:id="@+id/local_list"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:focusable="true"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="1200dp"
+            android:layout_height="390dp"
+            android:layout_marginLeft="65dp"
+            android:clipChildren="false"
+            android:clipToPadding="true"
+            android:paddingTop="1px"
+            android:focusable="false"
+            android:orientation="horizontal">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_sims"
+                style="@style/ScrollBarStyle"
+                android:layout_width="763.3dp"
+                android:layout_height="360dp"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                />
+
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="821px"-->
+            <!--                    android:layout_height="53px"-->
+            <!--                    android:layout_marginLeft="43px"-->
+            <!--                    android:layout_marginTop="3px"-->
+            <!--                    android:drawableTop="@drawable/mask"-->
+            <!--                    android:enabled="false">-->
+
+
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <com.tcl.uicompat.TCLButton
+            android:id="@+id/copy_return"
+            style="@style/Button_SuperLarge"
+            android:layout_width="300dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center_horizontal"
+            android:enabled="true"
+            android:focusable="true"
+            android:onClick="copy_sim"
+            android:text="全部复制" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

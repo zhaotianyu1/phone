@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launcher_bg"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="15dp"
+            android:id="@+id/top"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:ignore="MissingConstraints"
+            android:layout_marginLeft="70px"
+            android:layout_marginRight="105px">
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0px"
+                android:layout_gravity="center_vertical"
+                android:text="短信"
+                android:textColor="@color/white"
+                android:paddingLeft="66px"
+                android:textSize="45px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="1290px">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Text_signal"
+                    android:text="中国移动"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:focusable="false"
+                    android:enabled="false"/>
+                <ImageButton
+                    android:layout_width="48px"
+                    android:layout_height="48px"
+                    android:id="@+id/Button_signal"
+                    android:background="@drawable/five"
+                    android:layout_marginLeft="16px"
+                    android:layout_gravity="center_vertical"
+                    android:focusable="false"
+                    android:enabled="false"
+                    android:layout_marginRight="16px"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="36dp"
+
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/textNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="75px"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:maxLength="11"
+                    android:text="新信息"
+                    android:textColor="@color/white"
+                    android:textSize="38px" />
+                <LinearLayout
+                    android:layout_width="550dp"
+                    android:layout_height="480dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="60dp"
+                    android:orientation="vertical"
+                    android:background="@color/dimgrey"
+
+                    tools:ignore="MissingConstraints">
+                    <LinearLayout
+                        android:layout_width="533.3dp"
+                        android:layout_height="86dp"
+
+                        android:layout_marginTop="2dp"
+                        >
+                    <ImageButton
+                        android:id="@+id/message_photo"
+                        android:layout_width="120px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="270px"
+                        android:layout_marginTop="12px"
+                        android:layout_marginBottom="12px"
+                        android:background="@drawable/male01"
+                        android:paddingRight="72px" />
+                    <TextView
+                        android:id="@+id/name_chat"
+                        android:layout_width="206.7dp"
+                        android:layout_height="37.3dp"
+                        android:text="13061410029"
+                        android:textColor="#B3FFFFFF"
+                        android:textSize="24sp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="23.3dp"
+                        />
+                    </LinearLayout>
+
+                    <!-- 聊天内容 listview -->
+                    <ListView
+                        android:id="@+id/listview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="300dp"
+                        android:layout_above="@id/rl_bottom"
+                        android:layout_below="@id/rl_layout"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:cacheColorHint="#0000"
+                        android:divider="@null"
+                        android:dividerHeight="5dp"
+                        android:scrollbarStyle="outsideOverlay"
+                        android:stackFromBottom="true" />
+
+                    <RelativeLayout
+                        android:id="@+id/btn_bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivPopUp" >
+
+                        <Button
+                            android:id="@+id/btn_send"
+                            android:layout_width="60dp"
+                            android:layout_height="260dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="30dp"
+                            android:onClick="btn_send"
+                            android:background="@drawable/selector_contact"
+                            android:text="发送" />
+
+                        <EditText
+                            android:id="@+id/et_sendmessage"
+                            android:layout_width="770dp"
+                            android:layout_height="60dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/btn_send"
+                            android:background="@drawable/edit_backgrounds"
+                            android:singleLine="true"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launcher_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="885.3dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="53.5dp"
+                android:gravity="bottom"
+                android:layout_marginLeft="77.3dp"
+                android:text="复制联系人"
+                android:textColor="#B3FFFFFF"
+                android:textSize="37.3sp" />
+
+
+        </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+<!--            <ViewStub-->
+<!--                android:id="@+id/cab_stub"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="48dp" />-->
+            <TextView
+                android:id="@+id/textRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="116px"
+                android:layout_marginTop="47px"
+                android:text="SIM卡"
+                android:textColor="@color/white"
+                android:textSize="36px"
+                android:alpha="0.6"/>
+
+            <RelativeLayout
+                android:layout_width="821px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20px"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:paddingTop="1px"
+                android:layout_marginLeft="116px"
+                android:layout_marginBottom="53px">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_sim"
+                    android:layout_width="821px"
+                    android:layout_height="520px"
+                    android:layout_marginTop="10px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8px"
+                    android:layout_marginTop="47px"
+                    android:text="本地"
+                    android:alpha="0.6"
+                    android:textColor="@color/white"
+                    android:textSize="36px" />
+
+
+            <RelativeLayout
+                android:layout_width="821px"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:paddingTop="1px"
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="43px"
+                android:layout_marginBottom="53px">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_phone"
+                    android:layout_width="821px"
+                    android:layout_height="520px"
+                    android:layout_marginTop="10px"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    />
+            </RelativeLayout>
+            <!--                <TextView-->
+            <!--                    android:layout_width="821px"-->
+            <!--                    android:layout_height="53px"-->
+            <!--                    android:layout_marginLeft="43px"-->
+            <!--                    android:layout_marginTop="3px"-->
+            <!--                    android:drawableTop="@drawable/mask"-->
+            <!--                    android:enabled="false">-->
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <com.tcl.uicompat.TCLNavigationItem
+            android:id="@+id/copy_devert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="700px"
+            android:enabled="true"
+            android:onClick="sim_local"
+            android:text="复制"/>
+
+        <com.tcl.uicompat.TCLNavigationItem
+            android:id="@+id/copy_devert2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="870px"
+            android:enabled="true"
+            android:onClick="local_sim"
+            android:text="复制"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="1475dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="0dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+            <com.tcl.uicompat.TCLNavigationItem
+                android:id="@+id/copy_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="888px"
+                android:layout_marginTop="1px"
+                android:enabled="true"
+                android:focusable="true"
+                android:onClick="on_return"
+                android:text="返回" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

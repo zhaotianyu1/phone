@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:background="@drawable/dialog">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:orientation="horizontal"
+            android:id="@+id/type1"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center">
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                    android:id="@+id/buttVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:glow_type="icon"
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:background="@drawable/win_video_contact_selector"
+                        android:enabled="true"
+                        android:layout_gravity="center"/>
+                </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                <TextView
+                    android:id="@+id/video_call_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频通话"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18.7sp"
+                    android:textColor="#4DFFFFFF"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <!--android:layout_marginLeft="550px"-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="76dp"
+                android:gravity="center">
+                <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                    android:id="@+id/buttAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:glow_type="icon"
+                    >
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:background="@drawable/win_audio_contact_selector"
+                        android:enabled="true"
+                        android:layout_gravity="center_horizontal"/>
+                </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                <TextView
+                    android:id="@+id/audio_call_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="语音通话"
+                    android:textSize="18.7sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#4DFFFFFF"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

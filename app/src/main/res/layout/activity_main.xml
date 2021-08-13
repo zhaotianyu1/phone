@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launcher_bg"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <include layout="@layout/status_bar"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            >
+
+            <LinearLayout
+                android:layout_width="750dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/tags"
+                    >
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:gravity="center">
+
+                        <com.tcl.uicompat.TCLNavigationItem
+                            android:id="@+id/record_button"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:focusable="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:gravity="center">
+
+                        <com.tcl.uicompat.TCLNavigationItem
+                            android:id="@+id/contacts__button"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:focusable="true"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="通话记录"
+                    android:textColor="#4dFFFFFF"
+                    android:layout_marginLeft="65dp"
+                    android:textSize="21.3sp" />
+
+
+
+                <FrameLayout
+                    android:id="@+id/main_act"
+                    android:layout_width="653.3dp"
+                    android:layout_height="530dp"
+                    android:clipChildren="false"
+                    android:layout_marginLeft="10dp"
+                    android:clipToPadding="true"
+                    android:paddingTop="1px"
+                    android:focusable="false"
+                    android:layout_marginTop="10.7dp">
+
+                    <LinearLayout
+                        android:id="@+id/record_boolean"
+                        android:layout_width="276.6dp"
+                        android:focusable="false"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="122dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="276.6dp"
+                            android:layout_height="238dp"
+                            android:src="@drawable/call_nocall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="16.7dp"
+                            android:text="还没有通话记录"
+                            android:textColor="#66FFFFFF"
+                            android:textSize="21.3sp" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_record"
+                        android:layout_width="533.3dp"
+                        android:clipChildren="false"
+                        android:layout_marginTop="25px"
+                        android:layout_marginLeft="55dp"
+                        android:layout_marginRight="20dp"
+                        android:clipToPadding="false"
+
+                        android:layout_height="wrap_content"
+                        />
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/record_mask"-->
+<!--                        android:layout_width="533.3dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/call_mask" />-->
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="51dp"
+                android:layout_marginTop="113dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                >
+                <EditText
+                    android:id="@+id/phone_num_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:hint="请输入对方手机号"
+                    android:theme="@style/MyEditText"
+                    android:textColor="@color/white"
+                    android:textColorHint="#4DFFFFFF"
+                    android:textIsSelectable="false"
+                    android:enabled="true"
+                    android:maxLength="20"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:focusable="false"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/test1"
+                    android:layout_marginTop="8dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum1"
+                        >
+                        <ImageButton
+                            android:id="@+id/num1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/num_selector_1"
+                            android:focusable="true"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum2"
+                        >
+                        <ImageButton
+                            android:id="@+id/num2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:duplicateParentState="true"
+                            android:background="@drawable/num_selector_2"
+                            android:enabled="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        android:onClick="onNum3"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        >
+                        <ImageButton
+                            android:id="@+id/num3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_3"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/test2"
+                    android:layout_marginTop="8dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum4"
+                        >
+                        <ImageButton
+                            android:id="@+id/num4"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/num_selector_4"
+                            android:enabled="true"
+                            android:duplicateParentState="true" />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum5"
+                        >
+                        <ImageButton
+                            android:id="@+id/num5"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_5"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum6"
+                        >
+                        <ImageButton
+                            android:id="@+id/num6"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_6"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/test3"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum7"
+                        >
+                        <ImageButton
+                            android:id="@+id/num7"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/num_selector_7"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum8"
+                        >
+                        <ImageButton
+                            android:id="@+id/num8"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_8"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum9"
+                        >
+                        <ImageButton
+                            android:id="@+id/num9"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_9"
+                            android:enabled="true"
+                            android:duplicateParentState="true" />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:id="@+id/numd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        android:onClick="onNumrubis"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        >
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/num_selector_rubbish"
+                            android:duplicateParentState="true"
+                            android:enabled="true"/>
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:id="@+id/num0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNum0"
+                        >
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_0"
+                            android:enabled="true"
+                            android:duplicateParentState="true"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:id="@+id/numDD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:glow_type = "icon"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:onClick="onNumdele"
+                        >
+                        <ImageButton
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/num_selector_delete"
+                            android:duplicateParentState="true"
+                            android:enabled="true"/>
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                    <!--android:drawableTop="@drawable/delet"-->
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    >
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/videoCall"
+                        android:onClick="onVideoCall"
+                        android:nextFocusUp="@id/numDD"
+                        android:layout_gravity="center_horizontal"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        app:glow_type = "icon"
+                        >
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/win_video_selector"
+                            android:duplicateParentState="true" />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/audioCall"
+                        android:onClick="onAudioCall"
+                        android:nextFocusUp="@id/numDD"
+                        android:layout_gravity="center_horizontal"
+                        app:scale_anim_start_value="1.0"
+                        app:scale_anim_end_value="1.0"
+                        android:focusable="true"
+                        android:enabled="true"
+                        app:glow_type="icon">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="35dp"
+                            android:duplicateParentState="true"
+                            android:background="@drawable/win_audio_selector"
+                            />
+                    </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

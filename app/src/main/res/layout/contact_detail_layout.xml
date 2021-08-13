@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/launcher_bg"
+    tools:context=".phonebook.ContactsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            tools:ignore="MissingConstraints">
+
+            <include layout="@layout/status_bar"/>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="15dp">
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:gravity="center">
+
+                        <com.tcl.uicompat.TCLNavigationItem
+                            android:id="@+id/record_button"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:focusable="true"
+                            android:onClick="record_buttons" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:gravity="center">
+
+                        <com.tcl.uicompat.TCLNavigationItem
+                            android:id="@+id/contacts__button"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:focusable="true"
+                            android:onClick="contacts__buttons" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_marginLeft="65dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="85.3dp"
+                        android:layout_height="31.3dp"
+                        android:focusable="false"
+                        android:gravity="left"
+                        android:text="联系人"
+                        android:textColor="#66FFFFFF"
+                        android:textSize="21.3sp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="104px"
+                        android:layout_marginTop="10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+
+                        <!--                        <androidx.constraintlayout.widget.ConstraintLayout-->
+                        <!--                            android:id="@+id/add1"-->
+                        <!--                            android:layout_width="260dp"-->
+                        <!--                            android:layout_height="94px"-->
+                        <!--                            android:orientation="horizontal"-->
+                        <!--                            android:gravity="center"-->
+                        <!--                            android:onClick="onKeyAdd"-->
+                        <!--                            android:background="@drawable/element_tcl_btn_background_select"-->
+                        <!--                            >-->
+                        <!--                            <ImageView-->
+                        <!--                                android:id="@+id/addiCoin"-->
+                        <!--                                android:layout_width="50dp"-->
+                        <!--                                android:layout_height="50dp"-->
+                        <!--                                android:layout_marginLeft="20dp"-->
+                        <!--                                android:drawable="@drawable/ic_add_selector"-->
+                        <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                                app:layout_constraintLeft_toLeftOf="parent"-->
+                        <!--                                />-->
+                        <!--                            <TextView-->
+                        <!--                                android:id="@+id/add_text"-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:textColor="?attr/element_tcl_btn_text_color_select"-->
+                        <!--                                android:text="添加联系人"-->
+                        <!--                                app:layout_constraintLeft_toLeftOf="parent"-->
+                        <!--                                app:layout_constraintRight_toRightOf="parent"-->
+                        <!--                                app:layout_constraintTop_toTopOf="parent"-->
+                        <!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+                        <!--                                android:textSize="24sp"/>-->
+
+                        <!--                        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                        <com.tcl.uicompat.TCLButton
+                            android:id="@+id/add1"
+                            style="@style/Button_SuperLarge"
+                            android:layout_width="260dp"
+                            android:layout_height="94px"
+                            android:drawableLeft="@drawable/ic_add_selector"
+                            android:onClick="onKeyAdd"
+                            android:paddingLeft="25dp"
+                            android:drawablePadding="25dp"
+                            android:text="添加联系人"
+                            app:need_border="false" />
+
+                        <com.tcl.uicompat.TCLButton
+                            android:id="@+id/copy"
+                            style="@style/Button_SuperLarge"
+                            android:layout_width="260dp"
+                            android:layout_height="94px"
+                            android:layout_marginLeft="17px"
+                            android:drawableLeft="@drawable/ic_copy_selector"
+                            android:onClick="onKeyCopy"
+                            android:paddingLeft="25dp"
+                            android:drawablePadding="25dp"
+                            android:text="复制联系人"
+                            app:need_border="false" />
+                        <!--                    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout-->
+                        <!--                        android:id="@+id/On_message"-->
+                        <!--                        android:layout_width="104px"-->
+                        <!--                        android:layout_height="104px"-->
+                        <!--                        android:layout_marginLeft="20px"-->
+                        <!--                        app:need_border="false"-->
+                        <!--                        android:background="@drawable/copy_selector"-->
+                        <!--                        android:onClick="onKeyMessage" />-->
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="104px"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="3dp"
+                    android:clipChildren="false"
+
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+
+                    <com.tcl.uicompat.TCLEditText
+                        android:id="@+id/text_name"
+                        style="@style/Normal5GEditText"
+                        android:layout_width="533.3dp"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/ic_search_seletor"
+                        android:hint="请输入姓名/电话号码"
+                        android:imeOptions="actionSearch"
+                        android:drawablePadding="35dp"
+                        android:paddingLeft="25dp"
+                        android:enabled="true"
+                        android:textColor="#E6FFFFFF"
+                        android:textColorHint="#4DFFFFFF"
+                        >
+
+                    </com.tcl.uicompat.TCLEditText>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/benji"
+                    android:layout_width="533.3dp"
+                    android:layout_height="86dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="1px"
+                    android:background="#0FF0F0F2"
+                    android:clickable="false"
+                    android:enabled="false"
+                    android:focusable="false">
+                    <!--                    <ImageButton-->
+                    <!--                        android:id="@+id/peo_photo_contact"-->
+                    <!--                        android:layout_width="42.5dp"-->
+                    <!--                        android:layout_height="42.5dp"-->
+                    <!--                        android:background="#66FFFFFF"-->
+                    <!--                        android:layout_marginLeft="26.7dp"-->
+                    <!--                        android:layout_marginTop="26.7dp"-->
+                    <!--                        android:focusable="false"-->
+                    <!--                        android:enabled="false"-->
+                    <!--                        android:paddingRight="72px" />-->
+
+                    <ImageView
+                        android:id="@+id/peo_photo_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/list_avatar_nor"
+                        android:focusable="false" />
+
+                    <TextView
+                        android:id="@+id/con_lists"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:layout_gravity="center_vertical"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text="本机号码"
+                        android:textColor="#99FFFFFF"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/local_phone"
+                        android:layout_width="206.7dp"
+                        android:layout_height="37.3dp"
+                        android:gravity="right"
+                        android:layout_marginRight="23dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:text=""
+                        android:textColor="#99FFFFFF"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!--                <View-->
+                <!--                    android:id="@+id/record_mode"-->
+                <!--                    android:layout_width="533.3dp"-->
+                <!--                    android:layout_height="1px"-->
+                <!--                    android:layout_marginLeft="65dp"-->
+                <!--                    android:background="@drawable/divide" />-->
+
+
+                <FrameLayout
+                    android:layout_width="620dp"
+                    android:layout_height="390dp"
+                    android:layout_marginLeft="25dp"
+                    android:paddingTop="1px"
+                    android:clipChildren="false"
+                    android:clipToPadding="true"
+                    android:focusable="false">
+
+
+                    <com.example.tclphone.phonebook.contactadapter.SWRecyclerView
+                        android:id="@+id/recycler_contracts"
+                        android:layout_width="533.3dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="15dp"
+                        android:overScrollMode="never"
+
+                        android:scrollbars="none" />
+
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/contact_mask"-->
+                    <!--                        android:layout_width="533.3dp"-->
+                    <!--                        android:layout_marginLeft="20dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:background="@drawable/call_mask" />-->
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/contacts_detail"
+                android:layout_width="440dp"
+                android:layout_height="262.7dp"
+
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="135dp"
+                android:focusable="true">
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

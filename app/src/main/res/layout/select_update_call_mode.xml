@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog"
+    android:gravity="center"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+        <TextView
+            android:id="@+id/text"
+            android:textSize="32sp"
+            android:textColor="#4dFFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+            <com.tcl.uicompat.TCLButton
+                style="@style/Button_Middle"
+                android:id="@+id/bingo"
+                android:text="确认"
+                android:textSize="28sp"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:focusable="true"
+                android:enabled="true"/>
+            <com.tcl.uicompat.TCLButton
+                style="@style/Button_Middle"
+                android:id="@+id/cancel"
+                android:text="取消"
+                android:layout_marginLeft="60dp"
+                android:textSize="28sp"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:focusable="true"
+                android:enabled="true"/>
+        </LinearLayout>
+
+</LinearLayout>

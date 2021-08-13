@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="450dp"
+    android:layout_height="400dp"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="#0FF0F0F2"
+    android:id="@+id/contacts_details"
+    android:focusable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/peo_photo_contact_details"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_popup_avatar_nor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:focusable="false"
+            android:enabled="false"
+            />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="105dp"
+        android:text="123213"
+        android:textColor="#99FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/con_list_details"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="161.2dp"
+        android:text="0755-83338678"
+        android:textColor="#99FFFFFF"
+        android:textSize="26.7sp" />
+
+
+        <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+            android:id="@+id/buttVideo"
+            app:need_border="true"
+            android:layout_width="85.3dp"
+            android:layout_height="85.3dp"
+            app:border_circle_radius="70px"
+            android:layout_marginLeft="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="226.7dp"
+            android:background="@drawable/win_video_contact_selector"
+            android:enabled="true">
+            <requestFocus />
+
+        </com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout>
+
+        <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+            android:id="@+id/buttPhone"
+            android:layout_width="85.3dp"
+            app:need_border="true"
+            android:layout_height="85.3dp"
+            app:border_circle_radius="70px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="226.7dp"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/win_audio_contact_selector"
+            android:enabled="true" />
+
+    <com.tcl.ff.component.animer.glow.view.AllCellsGlowLayout
+        android:id="@+id/editContacts"
+        android:layout_width="85.3dp"
+        app:need_border="true"
+        android:layout_height="85.3dp"
+        app:border_circle_radius="70px"
+        android:layout_marginRight="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="226.7dp"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/ic_edit_selector"
+        android:enabled="true" />
+
+    <TextView
+        android:layout_width="74.7dp"
+        android:layout_height="26.7dp"
+        android:text="视频通话"
+        android:textColor="#66FFFFFF"
+        android:layout_marginLeft="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="326.7dp"
+        android:textSize="18.7sp" />
+
+    <TextView
+        android:layout_width="74.7dp"
+        android:layout_height="26.7dp"
+        android:text="语音通话"
+        android:textColor="#66FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:textSize="18.7sp"
+        android:layout_marginTop="326.7dp" />
+    <TextView
+        android:layout_width="74.7dp"
+        android:layout_height="26.7dp"
+        android:text="编 辑"
+        android:textColor="#66FFFFFF"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:textSize="18.7sp"
+        android:layout_marginTop="326.7dp"/>
+
+
+
+</RelativeLayout>
